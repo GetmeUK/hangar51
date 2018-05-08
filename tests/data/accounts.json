@@ -1,0 +1,11 @@
+[
+    {"name": "burst", "config_filepath": "local.cfg"},
+    {"name": "deploycms", "config_filepath": "local.cfg"},
+    {"name": "geocode", "config_filepath": "local.cfg"},
+    {"name": "getcontenttools", "config_filepath": "local.cfg"},
+    {"name": "getme", "config_filepath": "local.cfg"},
+    {"name": "glitch", "config_filepath": "s3.cfg"},
+    {"name": "hangar51", "config_filepath": "invalid_s3.cfg"},
+    {"name": "lupin", "config_filepath": "s3.cfg"},
+    {"name": "mongoframes", "config_filepath": "s3.cfg"}
+]

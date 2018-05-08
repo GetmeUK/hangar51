@@ -1,0 +1,17 @@
+from . import DefaultConfig
+
+
+class Config(DefaultConfig):
+
+    # Debugging
+    DEBUG = True
+
+    # Networking
+    SERVER_NAME = 'hangar51.local'
+
+    # Tasks (background)
+    CELERY_BROKER_URL = 'amqp://hangar51:password@localhost/hangar51'
+
+    # Additional variation support
+    SUPPORT_FACE_DETECTION = True
+

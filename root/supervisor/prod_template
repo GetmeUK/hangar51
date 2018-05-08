@@ -1,0 +1,26 @@
+[program:hangar51_server]
+command=/sites/hangar51/bin/gunicorn --workers 2 --bind 0.0.0.0:5152 'app:create_app("prod")'
+directory=/sites/hangar51
+user=hangar51
+autostart=true
+autorestart=true
+startsecs=3
+stopsignal=KILL
+
+[program:hangar51_beat]
+command=/sites/hangar51/bin/celery -A run_tasks beat --env prod
+directory=/sites/hangar51
+user=hangar51
+autostart=false
+autorestart=true
+startsecs=3
+stopsignal=KILL
+
+[program:hangar51_worker]
+command=/sites/hangar51/bin/celery -A run_tasks worker --env prod
+directory=/sites/hangar51
+user=hangar51
+autostart=true
+autorestart=true
+startsecs=3
+stopsignal=KILL
